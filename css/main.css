@@ -104,9 +104,9 @@ textarea {
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 400px;
+    width: 800px;
     height: 200px;
-    margin-left: -200px;
+    margin-left: -400px;
     margin-top: -100px;
 
     text-align: center;
@@ -120,12 +120,12 @@ textarea {
 
     color: red;
 
-    animation: flashjizz infinite 0.3s;
+    animation: flashjizz infinite 0.2s;
 }
 
 body
 {
-    animation: flashjizz2 infinite 0.3s;
+    animation: flashjizz2 infinite 0.2s;
 }
 
 @keyframes flashjizz {
