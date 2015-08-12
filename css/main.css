@@ -99,6 +99,56 @@ textarea {
 
 
 
+#jizz
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 400px;
+    height: 200px;
+    margin-left: -200px;
+    margin-top: -100px;
+
+    text-align: center;
+
+    font-size: 144px;
+
+    text-transform: uppercase;
+    font-style: italic;
+    
+    font-family: "Times New Roman", serif;
+
+    color: red;
+
+    animation: flashjizz infinite 0.3s;
+}
+
+body
+{
+    animation: flashjizz2 infinite 0.3s;
+}
+
+@keyframes flashjizz {
+  50% {
+    color: red;
+  }
+
+  51% {
+    color: blue;
+  }
+}
+
+
+
+@keyframes flashjizz2 {
+  50% {
+    background-color: blue;
+  }
+
+  51% {
+    background-color: red;
+  }
+}
 
 
 
