@@ -105,8 +105,13 @@ textarea {
 
 #info
 {
-  background-color: #6875ef;
+  background-color: hsl(234deg 81% 67%);
   color: #fff;
+}
+
+#info h1
+{
+  margin-bottom: 0.2em;
 }
 
 header, h1, h2, h3, h4
@@ -148,17 +153,6 @@ a, summary, p
   color: #000;
 }
 
-.project:hover
-{
-  box-shadow: #6875ef 0px 0px 0px 4px;
-}
-
-.project:focus
-{
-  box-shadow: #efc168 0px 0px 0px 6px;
-  outline: none;
-}
-
 .project > img
 {
   width: 100%;
@@ -179,6 +173,96 @@ a, summary, p
 .project summary
 {
   display: block;
+}
+
+.horiz-list
+{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.horiz-list li
+{
+  float: left;
+}
+
+.svg-icons li
+{
+  margin-right: 8px;
+}
+
+.svg-icons li:last-child
+{
+  margin-right: 0;
+}
+
+.svg-icons img
+{
+  width: 24px;
+  height: 24px;
+}
+
+.float-right
+{
+  float: right;
+}
+
+.append-icons
+{
+  position: relative;
+}
+
+.append-icons.icons-1
+{
+  /*24x1 + spacingx1 = 24*/
+  padding-right: 32px;
+}
+
+.append-icons.icons-2
+{
+  /*24x2 + spacingx2 = 48 + 8*/
+  padding-right: 64px;
+}
+
+.append-icons.icons-3
+{
+  /*24x3 + spacingx3 = 72 + 24*/
+  padding-right: 96px;
+}
+
+.pin-right
+{
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+a.button
+{
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 8px 14px;
+    display: inline-block;
+    background: hsl(234deg 81% 67%);
+    margin: 1em 0.5em 0 0;
+    color: #fff;
+}
+
+a.button:hover
+{
+  /*box-shadow: #6875ef 0px 0px 0px 4px;*/
+  background: hsl(234deg 81% 72%);
+  text-decoration: underline;
+}
+
+a.button:focus
+{
+  box-shadow: #6875ef 0px 0px 0px 6px;
+  outline: none;
+  background: #fff;
+  color: #000;
+  text-decoration: underline;
 }
 
 /* ==========================================================================
