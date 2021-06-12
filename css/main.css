@@ -98,14 +98,20 @@ textarea {
   padding: 1em;
 }
 
-.reverse-padding
+body
 {
-  margin: 0 -0.5em;
+  background-color: #eee;
+}
+
+main
+{
+  padding-bottom: 3em;
 }
 
 #info
 {
   background-color: hsl(234deg 81% 67%);
+  background: linear-gradient(180deg, hsl(234deg 81% 65%) 0%, hsl(234deg 81% 69%) 100%);
   color: #fff;
 }
 
@@ -117,6 +123,7 @@ header, h1, h2, h3, h4
 h1
 {
   font-size: 3em;
+  line-height: 1;
 }
 
 h2
@@ -142,20 +149,20 @@ a, summary, p
   display: inline-block;
   max-width: 350px;
   border-radius: 10px;
-  background-color: #eee;
-  margin-bottom: 1em;
-
+  background-color: #fff;
   width: 48%;
-
   text-decoration: none;
   color: #000;
+  box-shadow: 0 20px 20px -10px rgb(0 0 0 / 10%);
+  border: 1px solid rgba(0,0,0,0.1);
+  box-sizing: content-box;
 }
 
 .project > img
 {
   width: 100%;
   height: auto;
-  border-radius: 10px 10px 0 0;
+  border-radius: 9px 9px 0 0;
 }
 
 .project > section
@@ -192,7 +199,7 @@ a, summary, p
 
 .svg-icons li
 {
-  margin-right: 8px;
+  margin-right: 12px;
 }
 
 .svg-icons li:last-child
@@ -200,10 +207,28 @@ a, summary, p
   margin-right: 0;
 }
 
-.svg-icons img, .svg-icons a
+.svg-icons a
+{
+  padding: 8px;
+  margin: -8px;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  line-height: 0;
+}
+
+.svg-icons a:hover
+{
+  border-radius: 32px;
+  background-color: rgba(255,255,255,0.1);
+}
+
+.svg-icons img
 {
   width: 24px;
   height: 24px;
+  display: block;
+  line-height: 0;
 }
 
 .float-right
@@ -218,20 +243,21 @@ a, summary, p
 
 .append-icons.icons-1
 {
-  /*24x1 + spacingx1 = 24*/
-  padding-right: 32px;
+  padding-right: 36px;
 }
 
 .append-icons.icons-2
 {
-  /*24x2 + spacingx2 = 48 + 8*/
-  padding-right: 64px;
+  padding-right: 72px;
 }
 
 .append-icons.icons-3
 {
-  /*24x3 + spacingx3 = 72 + 24*/
-  padding-right: 96px;
+  padding-right: 108px;
+}
+.append-icons.icons-4
+{
+  padding-right: 144px;
 }
 
 .pin-right
@@ -248,6 +274,7 @@ a.button
     padding: 8px 14px;
     display: inline-block;
     background: hsl(234deg 81% 67%);
+    background: linear-gradient(180deg, hsl(234deg 81% 69%) 0%, hsl(234deg 81% 65%) 100%);
     margin: 1em 0.5em 0 0;
     color: #fff;
 }
@@ -356,7 +383,7 @@ a.button:focus
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 570px) {
 
   #info h1
   {
