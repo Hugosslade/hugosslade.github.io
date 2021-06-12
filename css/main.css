@@ -136,7 +136,7 @@ a, summary, p
   font-family: 'Open Sans', sans-serif;
 }
 
-#projects
+.flex-container
 {
   display: flex;
   flex-wrap: wrap;
@@ -144,38 +144,71 @@ a, summary, p
   gap: 20px;
 }
 
-.project
+.flex-item
 {
   display: inline-block;
-  max-width: 350px;
   border-radius: 10px;
   background-color: #fff;
-  width: 48%;
   text-decoration: none;
   color: #000;
   box-shadow: 0 20px 20px -10px rgb(0 0 0 / 10%);
-  border: 1px solid rgba(0,0,0,0.1);
   box-sizing: content-box;
 }
 
-.project > img
+.flex-item-2
+{
+  max-width: 350px;
+  width: 48%;
+}
+
+.flex-item-1
+{
+  max-width: 720px;
+  width: 100%;
+}
+
+.flex-item > .img-container
+{
+  background: none 50% 50% no-repeat;
+  background-size: cover;
+  display: inline-block;
+}
+
+.flex-item.img-top > .img-container
 {
   width: 100%;
   height: auto;
+  padding-bottom: 50%;
   border-radius: 9px 9px 0 0;
+  vertical-align: top;
 }
 
-.project > section
+.flex-item.img-left > .img-container
+{
+  width: 50%;
+  height: 100%;
+  border-radius: 9px 0 0 9px;
+  vertical-align: top;
+}
+
+.flex-item > section
 {
   padding: 15px;
+  box-sizing: border-box;
 }
 
-.project > section > header
+.flex-item.img-left > section
+{
+  width: 49%;
+  display: inline-block;
+}
+
+.flex-item > section > header
 {
   font-size: 1.4em;
 }
 
-.project summary
+.flex-item summary
 {
   display: block;
 }
@@ -221,6 +254,14 @@ a, summary, p
 {
   border-radius: 32px;
   background-color: rgba(255,255,255,0.1);
+}
+
+.svg-icons a:focus
+{
+  border-radius: 32px;
+  background-color: rgba(255,255,255,0.1);
+  box-shadow: #fff 0 0 0 6px;
+  outline: none;
 }
 
 .svg-icons img
