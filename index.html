@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
-  <meta name="theme-color" content="#fafafa">
+  <meta name="theme-color" content="#6774ef">
 </head>
 
 <body>
@@ -117,6 +117,100 @@
             </section>
           </div>
 
+          <div class="flex-item flex-item-2 project img-top">
+            <div class="img-container" style="background-image: url('img/project-chippy.jpg')"></div>
+            <section>
+              <header class="append-icons icons-1">Chippy
+                <ul class="horiz-list pin-right svg-icons svg-icons-24">
+                  <li><img src="img/apple.svg" alt="iOS" title="iOS"/></li>
+                </ul>
+              </header>
+              <summary>Fish & Chip shop time management game.</summary>
+              <!--<a class="button" href="#">View Project</a>-->
+              <a class="button" href="https://www.chippyapp.com/" target="_blank" rel="noreferrer noopener">Visit Website &#187;</a>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible">
+            <section>
+              <header class="append-expand">AI
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>I personally developed the AI in it's entirety. The bots were consistent across all games and between matches. Bots could have distinct personality types such as objective-focused or combat-oriented.</p>
+                <ul>
+                  <li>Personality based, such as objective-focused or combat-oriented.</li>
+                  <li>Used an action & priority system which was affected differently for each game mode.</li>
+                  <li>They can chat and react to other players and other bots using quick chat or the emote system.</li>
+                  <li>Their 'inputs' were the same as human players, using line-of-sight and the minimap.</li>
+                  <li>Controlled their characters through a virtual gamepad so they couldn't do any impossible or special behaviours.</li>
+                  <li>Attract mode for in-person events.
+                    <ul>
+                      <li>The AI could take over an idle machine and show message enticing players to play.</li>
+                      <li>A player could take over the controls and being playing an in-progress game immediately.</li>
+                    </ul>
+                  </li>
+                  <li>Games could run and test themselves using multiple clients indefinitely. Combining this with our bugtracker made it easier to find and fix obscure issues.</li>
+                </ul>
+                <p></p>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible">
+            <section>
+              <header class="append-expand">Multiplayer
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>I built the networking on top of Photon. Here are a few of the key features I added:</p>
+                <ul>
+                  <li>Room codes for easy cross platform play.</li>
+                  <li>Bot takeover any player which disconnects during a game.</li>
+                  <li>Minimal data transfer using bitpacking.</li>
+                  <li>Collision rewind using latency and tracked position for more consistent projectiles + impacts across different connections.</li>
+                  <li>Quick play - automatically find and join any active game in your region.</li>
+                </ul>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible">
+            <section>
+              <header class="append-expand">Player Accounts
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>The game supports cross-play and cross-progression using shared player accounts. Here are some of the features I created on:</p>
+                <ul>
+                  <li>Integration with game</li>
+                  <li>Feature planning for UI/UX as well as data structure.</li>
+                  <li>Account creation forms with client-side verification for gamepad, touch screen and keyboard/mouse.</li>
+                </ul>
+                <p>This system was built on top of Gamesparks.</p>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible">
+            <section>
+              <header class="append-expand">Level Editor
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>I created a suite of tools extending Unity for creation of the levels. The key features are:</p>
+                <ul>
+                  <li>Modular building creator with different sections & styles.</li>
+                  <li>Automatically attach windows, doors and other facades based on style (e.g. residential, derelict, etc)</li>
+                  <li>Place props individually or group with different sets and adjustable randomness.</li>
+                  <li>Create different surfaces and materials for both visual and gameplay differences.</li>
+                  <li>Pavement placement by dragging over area.</li>
+                  <li>Using user defined areas to control lighting and mesh fidelity allowing quick and effective performance optimization.</li>
+                </ul>
+                <p>Meshes generated through this system were cached and re-used across the scene(s) reducing file size. They also supported lightmapping.</p>
+              </summary>
+            </section>
+          </div>
         </section>
     </div>
   </main>

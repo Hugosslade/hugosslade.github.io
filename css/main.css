@@ -169,7 +169,7 @@ a, summary, p
 
 .flex-item > .img-container
 {
-  background: none 50% 50% no-repeat;
+  background: none 50% 0% no-repeat;
   background-size: cover;
   display: inline-block;
 }
@@ -277,9 +277,14 @@ a, summary, p
   float: right;
 }
 
-.append-icons
+.append-icons, .append-expand
 {
   position: relative;
+}
+
+.append-expand
+{
+  padding-right: 50px;
 }
 
 .append-icons.icons-1
@@ -320,14 +325,14 @@ a.button
     color: #fff;
 }
 
-a.button:hover
+a.button:hover, .button-expand:hover
 {
   /*box-shadow: #6875ef 0px 0px 0px 4px;*/
   background: hsl(234deg 81% 72%);
   text-decoration: underline;
 }
 
-a.button:focus
+a.button:focus, .button-expand:focus
 {
   box-shadow: #6875ef 0px 0px 0px 6px;
   outline: none;
@@ -335,6 +340,32 @@ a.button:focus
   color: #000;
   text-decoration: underline;
 }
+
+.button-expand
+{
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  text-decoration: none;
+  display: inline-block;
+  background-color: hsl(234deg 81% 67%);
+  background: linear-gradient(180deg, hsl(234deg 81% 65%) 0%, hsl(234deg 81% 69%) 100%);
+  text-align: center;
+  color: #fff;
+  text-decoration: none !important;
+}
+
+.collapsible:not(.expanded) .button-expand::before
+{
+  content: '+';
+}
+
+
+.collapsible.expanded .button-expand::before
+{
+  content: '-';
+}
+
 
 /* ==========================================================================
    Helper classes
@@ -358,7 +389,8 @@ a.button:focus
  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
 
-.sr-only {
+.sr-only, 
+.collapsible:not(.expanded) .collapse {
   border: 0;
   clip: rect(0, 0, 0, 0);
   height: 1px;
