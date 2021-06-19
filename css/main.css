@@ -350,6 +350,7 @@ nav a
   text-decoration: none;
   display: block;
   padding: 15px 0;
+  margin: -15px 0;
 }
 
 nav a:hover
@@ -488,13 +489,7 @@ a.button:focus, .button-expand:focus
   clear: both;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 600px) {
 
   #info h1
   {
