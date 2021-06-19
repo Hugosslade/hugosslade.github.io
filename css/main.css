@@ -110,14 +110,13 @@ main
 
 #info
 {
-  background-color: hsl(234deg 81% 67%);
-  background: linear-gradient(180deg, hsl(234deg 81% 65%) 0%, hsl(234deg 81% 69%) 100%);
   color: #fff;
 }
 
 header, h1, h2, h3, h4
 {
-  font-family: 'Hammersmith One', sans-serif;
+  /*font-family: 'Hammersmith One', sans-serif;*/
+  font-family: 'Paytone One', sans-serif;
 }
 
 h1
@@ -206,6 +205,20 @@ a, summary, p
 .flex-item > section > header
 {
   font-size: 1.4em;
+
+  margin-bottom: 0.1em;
+  margin-top: -0.1em;
+}
+
+/*.project.flex-item > section > header
+{
+  margin-bottom: 0.3em;
+  margin-top: -0.3em;
+}*/
+
+.flex-item > section > header .pin-right
+{
+  top: 4px;
 }
 
 .flex-item summary
@@ -313,28 +326,50 @@ a, summary, p
   top: 0;
 }
 
+#info, a.button, .button-expand
+{
+  background: hsl(234deg 27% 57%);
+  color: #fff;
+}
+
+nav
+{
+  background-color: hsl(234deg 27% 52%);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a
+{
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover
+{
+  text-decoration: underline;
+}
+
 a.button
 {
-    text-decoration: none;
-    border-radius: 6px;
-    padding: 8px 14px;
-    display: inline-block;
-    background: hsl(234deg 81% 67%);
-    background: linear-gradient(180deg, hsl(234deg 81% 69%) 0%, hsl(234deg 81% 65%) 100%);
-    margin: 1em 0.5em 0 0;
-    color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  display: inline-block;
+  margin: 1em 0.5em 0 0;
 }
 
 a.button:hover, .button-expand:hover
 {
   /*box-shadow: #6875ef 0px 0px 0px 4px;*/
-  background: hsl(234deg 81% 72%);
+  background: hsl(234deg 27% 65%);
   text-decoration: underline;
 }
 
 a.button:focus, .button-expand:focus
 {
-  box-shadow: #6875ef 0px 0px 0px 6px;
+  box-shadow: hsl(234deg 27% 57%) 0px 0px 0px 6px;
   outline: none;
   background: #fff;
   color: #000;
@@ -348,10 +383,7 @@ a.button:focus, .button-expand:focus
   border-radius: 32px;
   text-decoration: none;
   display: inline-block;
-  background-color: hsl(234deg 81% 67%);
-  background: linear-gradient(180deg, hsl(234deg 81% 65%) 0%, hsl(234deg 81% 69%) 100%);
   text-align: center;
-  color: #fff;
   text-decoration: none !important;
 }
 

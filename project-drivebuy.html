@@ -1,0 +1,332 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hugo Scott-Slade</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preload stylesheet" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Paytone+One&display=swap">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#6774ef">
+</head>
+
+<body>
+
+  <header id="info">
+    <div class="wrapper padding"><h1 class="append-icons icons-4">Hugo Scott-Slade
+      <ul id="social-links" class="horiz-list svg-icons pin-right">
+        <li><a href="https://twitter.com/hugosslade" target="_blank" rel="noreferrer noopener"><img src="img/twitter.svg" alt="Twitter"/></a></li>
+        <li><a href="https://github.com/hugosslade"  target="_blank" rel="noreferrer noopener"><img src="img/github.svg" alt="Github"/></a></li>
+        <li><a href="https://www.linkedin.com/in/hugo-scott-slade-7b9287125/" target="_blank" rel="noreferrer noopener"><img src="img/linkedin.svg" alt="LinkedIn"/></a></li>
+        <li><a href="mailto:hugosslade@gmail.com" target="_blank" rel="noreferrer noopener"><img src="img/email.svg" alt="Email"/></a></li>
+      </ul>
+    </h1>
+    </div>
+  </header>
+  <nav>
+    <div class="wrapper padding">
+      <a href="index.html">&laquo; Back to Projects</a>
+    </div>
+  </nav>
+  <main>
+    <div class="wrapper padding">
+      <!--<h2>Projects</h2>-->
+        <section id="projects" class="flex-container">
+          <div class="flex-item flex-item-1 project img-top">
+            <div class="img-container" style="background-image: url('img/project-drivebuy.jpg')"></div>
+            <section>
+              <header class="append-icons icons-2">Drive Buy
+                <ul class="horiz-list pin-right svg-icons svg-icons-24">
+                  <li><img src="img/steam.svg" alt="Steam" title="Steam"/></li>
+                  <li><img src="img/nintendoswitch.svg" alt="Nintendo Switch" title="Nintendo Switch"/></li>
+                </ul>
+              </header>
+              <summary>
+                <p>Drive Buy is a fast-paced multiplayer vehicle combat game with cross-play/cross-progression. There are multiple playable characters/vehicles, different game modes and maps, as well as unlockable character customisations.</p>
+                <p>I was the Technical Director for this project responsible for the majority of the development as well as briefing, managing and reviewing the work of other team members. I also worked across many other areas including game design and content creation such as customisation unlocks (skins, trails, etc) and multiple game maps.</p>
+                <p>I have organized the work I did into different sections highlighting some of the key points for each. For a fuller picture of my role &amp; responsibilities please get in touch using the links at the top of the page.</p>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible">
+            <section>
+              <header class="append-expand">AI
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>I personally developed the AI in it's entirety.</p>
+                <ul>
+                  <li>Personality based, such as objective-focused or combat-oriented.</li>
+                  <li>Used an action &amp; priority system which was affected differently for each game mode.</li>
+                  <li>They can chat and react to other players and other bots using quick chat or the emote system.</li>
+                  <li>Their 'inputs' were the same as human players, using line-of-sight and the minimap.</li>
+                  <li>Controlled their characters through a virtual gamepad so they couldn't do any impossible or special behaviours.</li>
+                  <li>Attract mode for in-person events.
+                    <ul>
+                      <li>The AI could take over an idle machine and show message enticing players to play.</li>
+                      <li>A player could take over the controls and being playing an in-progress game immediately.</li>
+                    </ul>
+                  </li>
+                  <li>Games could run and test themselves using multiple clients indefinitely. Combining this with our bugtracker made it easier to find and fix obscure issues.</li>
+                </ul>
+                <p></p>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible">
+            <section>
+              <header class="append-expand">Gameplay
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>I was the sole gameplay developer for the project and worked from prototype to release. I was also involved in game design from both a design and technical angle.</p>
+                <p>Here are some highlights of my work on the project:</p>
+                <ul>
+                  <li>I developed the vehicle physics with a focus on maneuverability and responsiveness.</li>
+                  <li>6 playable characters with their own vehicles which handled differently but consistently.</li>
+                  <li>3 permanent game modes &amp; some event based ones.</li>
+                  <li>Many iterations on game modes during prototype stage with a focus on testing quickly with realtime multiplayer.</li>
+                  <li>Multiple powerups with emergent interactions.</li>
+                  <li>Behind the scene changes, such as powerup weighting for players to keep games engaging and competitive.</li>
+                </ul>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible">
+            <section>
+              <header class="append-expand">Multiplayer
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>I built the networking on top of Photon. Here are a few of the key features I added:</p>
+                <ul>
+                  <li>Room codes for easy cross platform play.</li>
+                  <li>Bot takeover any player which disconnects during a game.</li>
+                  <li>Minimal data transfer using bitpacking.</li>
+                  <li>Collision rewind using latency and tracked position for more consistent projectiles + impacts across different connections.</li>
+                  <li>Quick play - automatically find and join any active game in your region.</li>
+                </ul>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible">
+            <section>
+              <header class="append-expand">Backend
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>The game supports cross-play and cross-progression using shared player accounts. There is also an event system which controls shop content, double xp weekends, etc. Here are some of the features I created:</p>
+                <ul>
+                  <li>Feature planning for UI/UX as well as data structure.</li>
+                  <li>Account creation forms with client-side verification for gamepad, touch screen and keyboard/mouse.</li>
+                  <li>Scoped out and briefed an event system which allowed iterative development and future extensibility.</li>
+                  <li>Built tools to manage backend and game data allowing non-technical team members to operate autonomously.</li>
+                  <li>Integrated all these features into the game.</li>
+                </ul>
+                <p>This system was built on top of Gamesparks.</p>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible">
+            <section>
+              <header class="append-expand">Level Editor
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>I created a suite of tools extending Unity for creation of the levels. The key features are:</p>
+                <ul>
+                  <li>Modular building creator with different sections &amp; styles.</li>
+                  <li>Automatically attach windows, doors and other facades based on style (e.g. residential, derelict, etc)</li>
+                  <li>Place props individually or group with different sets and adjustable randomness.</li>
+                  <li>Create different surfaces and materials for both visual and gameplay differences.</li>
+                  <li>Pavement placement by dragging over area.</li>
+                  <li>Using user defined areas to control lighting and mesh fidelity allowing quick and effective performance optimization.</li>
+                </ul>
+                <p>Meshes generated through this system were cached and re-used across the scene(s) reducing file size. They also supported lightmapping.</p>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible">
+            <section>
+              <header class="append-expand">UI Structure
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>I built a framework for many projects alongside Drive Buy to handle the UI. The key features are:</p>
+                <ul>
+                  <li>Simple to use API for moving between screens with multiple layers.</li>
+                  <li>Transitions could be created through a visual editor and reused throughout project.</li>
+                  <li>Leveraged Unity's Addressables package for improved loading times, reduced memory usage and smaller disk size.</li>
+                  <li>Input managed for keyboard/mouse, touch and gamepad with automatic visual updates for glyphs.</li>
+                  <li>Selected object managed between screens with history.</li>
+                  <li>Endless scrolling dynamic content with smooth performance with simple script data-source interface.</li>
+                  <li>Simple memory management and editor-friendly preload groups.</li>
+                </ul>
+                <p>I have shipped multiple products using this framework across multiple platforms including desktop, mobile and console.</p>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible">
+            <section>
+              <header class="append-expand">Localisation
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>Localisation was considered from the very start of the project so I developed a framework alongside the project.</p>
+                
+                <h3>Usage</h3>
+                <ul>
+                  <li>Localized strings could be setup directly in Editor and exported out when ready to localise.</li>
+                  <li>Localized label component using either Unity's Text or TextMeshPro which handled updating text automatically.</li>
+                  <li>Automatic string creation - either through component or tools to easily convert existing text/prefabs to localisation system.</li>
+                  <li>Text setup allowed additional format settings allowing simple text substition for dynamic elements such as player name, level, etc</li>
+                  <li>Font family &amp; style setup allowed automatic font swapping for any language, maintaining custom styles.</li>
+                  <li>All Left-to-right languages supported. <i>RTL support was not required but could be added.</i></li>
+                </ul>
+
+                <h3>Import / Export</h3>
+                <ul>
+                  <li>Export all existing text as CSV with suitable key/group for organization.</li>
+                  <li>Import tool using Google Sheets with configurable import map allowing various data setups.</li>
+                  <li>Generate JSON files if needed for either each language or all combined.</li>
+                  <li>Additionally it creates files for each language with every unique character to use with TextMeshPro to setup Font assets ahead of time for best performance.</li>
+                  <li>New localisations added directly into spreadsheet created as reference inside Unity.</li>
+                </ul>
+
+                <h3>Remote Update</h3>
+                <p>Remote update is not a requirement for the framework and can be enabled/disabled at anytime with a new build.</p>
+                <h4>Update with Addressables</h4>
+                <p>If your project uses Unity's Addressables package and is setup for remote updates then you can setup an addressable group and the localization framework will handle downloading the new data and updating your game's text.</p>
+                <h4>Update with URL</h4>
+                <p>A URL can be setup to fetch a JSON file from on every launch. This setup is very simple and supports all platforms.</p>
+
+                <h3>Tools</h3>
+                <p>I developed many tools for use with this framework for different stages of development.</p>
+                <ul>
+                  <li>Import - update all text using Google Sheet</li>
+                  <li>Export - take all text in game and export to CSV</li>
+                  <li>Duplicates - find duplicate text entries and allow removal &amp; replace old instances with new across project.</li>
+                  <li>Quick setup - convert any prefab/scene to use the localisation framework &amp; create any new/missing strings ready for export.</li>
+                  <li>Localizer Helper - build of game with option to highlight every visible text field and detail where in localization sheet it is, with copy + paste shortcode for convenience.</li>
+                  <li>Gibberish mode - Replace your text in editor/build with gibberish to easily find unlocalised strings and test content/font sizing.</li>
+                </ul>
+
+                <p>I have shipped multiple products using this framework across multiple platforms including desktop, mobile and console.</p>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible">
+            <section>
+              <header class="append-expand">Builds
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>Since I was responsible for nearly every single build of the game and the numerous different versions of the game for different scenarios (dev, publisher builds, in-person events, store builds, etc) I had to build a system to help me manage everything.</p>
+                <p>The base building blocks of my solution were Scripting Define Symbols as they let me discretely manage features as needed. I also used different settings for libraries and assets but that was on a platform-by-platform level was only useful for more general issues (e.g. no Discord integration on Nintendo Switch).</p>
+                <ul>
+                  <li>Created 'Build Definition' objects which contained a list of Scripting Define Symbols with a toggle and a description.</li>
+                  <li>Setup Build Definitions for each version, e.g: Steam Development, Steam Demo, Steam Beta, Steam Release, Non-Steam PC In-Person Event, etc, etc.</li>
+                  <li>In-person event builds allowed bypassing external auth and a custom LAN mode since the internet at events is often terrible.</li>
+                  <li>Integration with Itch.IO's Butler to upload new builds remotely for other team members/my other machines to use.</li>
+                  <li>Manage publisher/region specific builds.</li>
+                  <li>PC builds in about 40 seconds since majority of content in Addressables. This allowed rapid iteration and testing of builds.</li>
+                </ul>
+                <p>All these features were made to be simple to use with everything visual in Editor windows.</p>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible">
+            <section>
+              <header class="append-expand">Platforms
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>I was solely responsible for getting the game running in a perfomative way across multiple platforms. </p>
+                <h3>PC</h3>
+                <ul>
+                  <li>Game shipped on PC with uncapped framerate option.</li>
+                  <li>PC game runs on lower-end machines.</li>
+                </ul>
+                <h3>Nintendo Switch</h3>
+                <ul>
+                  <li>Runs smoothly at 30 FPS in both handheld and docked.</li>
+                  <li>I ensured minimal patch sizes for updates.</li>
+                  <li>This version was also released in Japan through a publisher which required a separate build so I created a tool to automate moving between versions.</li>
+                </ul>
+              <h3>Other Platforms</h3>
+              <p>Despite not releasing on the these platforms due to other constraints, I have done the necessary work for the following platforms:</p>
+              <h4>MacOS</h4>
+              <p>The game is completely playable on MacOS with 30FPS+ performance with no shader/input/etc issues.</p>
+              <h4>Mobile</h4>
+              <p>I developed full touch screen control support for mobile (bluetooth/mfi controllers also supported) and went through a heavy optimization process.</p>
+                <ul>
+                  <li>The game runs at 30FPS on an iPhone 6S (2015) with a peak runtime memory consumption of 85% of limit.</li>
+                  <li>Newer iOS and Android models run at 60FPS.</li>
+                </ul>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible">
+            <section>
+              <header class="append-expand">Tech Art &amp; VFX
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>I created the vast majority of in-game and UI effects, including meshes, textures, shaders and platform optimization.</p>
+                <ul>
+                  <li>Vehicle shader using color masks, decals and 5 different materials &amp; clearcoat allowing rapid content creation.</li>
+                  <li>Custom vehicle shader using traditional PBR textures alongside built-in clearcoat of the base shader.</li>
+                  <li>Boost trails with support for upto 8 attachment points per trail.</li>
+                  <li>Powerup effects such as electricity arcs and frozen objects.</li>
+                  <li>Stylized in game messaging with localisation support.</li>
+                  <li>Custom post-processing including deterministic glitch effect which affected authored area only.</li>
+                </ul>
+                <p>All of the above were also included in the Addressables system for minimal runtime memory usage and improved loading times.</p>
+              </summary>
+            </section>
+          </div>
+        </section> 
+    </div>
+  </main>
+  
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E8YXGT0ER4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-E8YXGT0ER4');
+  </script>
+</body>
+
+</html>
