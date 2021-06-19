@@ -1,40 +1,48 @@
 window.onload = function()
 {
-	function findAncestor (el, sel) {
+	var expandButtons = document.getElementsByClassName('button-expand');
+
+	for (var i = 0; i < expandButtons.length; i++)
+	{
+		var button = expandButtons[i];
+		var container = button.closest(".collapsible");
+
+		// if our url#hash exists, get the #hash, remove the # and compare to element id.
+		// if it matches, open the section by default
+		if(window.location.hash && window.location.hash.substring(1) === container.id)
+		{
+			ExpandOrCloseContainer(container);
+			container.scrollIntoView(true);
+		}
+
+		button.addEventListener("click", OnExpandButtonClick, false);
+	}
+
+	function FindAncestor (el, sel)
+	{
 	    while ((el = el.parentElement) && !((el.matches || el.matchesSelector).call(el,sel)));
 	    return el;
 	}
 
-	var expandButtons = document.getElementsByClassName('button-expand');
+	function OnExpandButtonClick(e)
+	{
+		var container = this.closest(".collapsible");
 
-	for (var i = 0; i < expandButtons.length; i++) {
-		var button = expandButtons[i];
-
-		window.a = button;
-
-		console.log(button);
-
-		button.addEventListener("click", function(e){
-			console.log(this);
+		ExpandOrCloseContainer(container);
 			
-			var container = findAncestor(this, ".collapsible");
-
-			if(container.classList.contains('expanded'))
-			{
-				container.classList.remove('expanded');
-			}
-			else
-			{
-				container.classList.add('expanded');
-			}
-			
-			e.preventDefault();
-			return false;
-
-		}, false);
+		e.preventDefault();
+		return false;
 	}
 
-	function expandOrCollapseParent(button)
+	function ExpandOrCloseContainer(container)
 	{
+		if (container.classList.contains('expanded'))
+		{
+			container.classList.remove('expanded');
+		}
+		else
+		{
+			container.classList.add('expanded');
+		}
 	}
 };

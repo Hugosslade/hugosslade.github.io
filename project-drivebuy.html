@@ -64,7 +64,7 @@
             </section>
           </div>
 
-          <div class="flex-item flex-item-1 collapsible">
+          <div class="flex-item flex-item-1 collapsible" id="section-ai">
             <section>
               <header class="append-expand">AI
                 <a class="button-expand pin-right" href="#"></a>
@@ -90,7 +90,47 @@
             </section>
           </div>
 
-          <div class="flex-item flex-item-1 collapsible">
+          <div class="flex-item flex-item-1 collapsible" id="section-backend">
+            <section>
+              <header class="append-expand">Backend
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>The game supports cross-play and cross-progression using shared player accounts. There is also an event system which controls shop content, double xp weekends, etc. </p>
+                <p>The backend system was built using Gamesparks. Here are some of the features I created:</p>
+                <ul>
+                  <li>Feature planning for UI/UX as well as data structure.</li>
+                  <li>Account creation forms with client-side verification for gamepad, touch screen and keyboard/mouse.</li>
+                  <li>Scoped out and briefed an event system which allowed iterative development and future extensibility.</li>
+                  <li>Built tools to manage backend and game data allowing non-technical team members to operate autonomously.</li>
+                  <li>Integrated all these features into the game.</li>
+                </ul>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible" id="section-builds">
+            <section>
+              <header class="append-expand">Builds
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>Since I was responsible for nearly every single build of the game and the numerous different versions of the game for different scenarios (dev, publisher builds, in-person events, store builds, etc) I had to build a system to help me manage everything.</p>
+                <p>The base building blocks of my solution were Scripting Define Symbols as they let me discretely manage features as needed. I also used different settings for libraries and assets but that was on a platform-by-platform level was only useful for more general issues (e.g. no Discord integration on Nintendo Switch).</p>
+                <ul>
+                  <li>Created 'Build Definition' objects which contained a list of Scripting Define Symbols with a toggle and a description.</li>
+                  <li>Setup Build Definitions for each version, e.g: Steam Development, Steam Demo, Steam Beta, Steam Release, Non-Steam PC In-Person Event, etc, etc.</li>
+                  <li>In-person event builds allowed bypassing external auth and a custom LAN mode since the internet at events is often terrible.</li>
+                  <li>Integration with Itch.IO's Butler to upload new builds remotely for other team members/my other machines to use.</li>
+                  <li>Manage publisher/region specific builds.</li>
+                  <li>PC builds in about 40 seconds since majority of content in Addressables. This allowed rapid iteration and testing of builds.</li>
+                </ul>
+                <p>All these features were made to be simple to use with everything visual in Editor windows.</p>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible" id="section-gameplay">
             <section>
               <header class="append-expand">Gameplay
                 <a class="button-expand pin-right" href="#"></a>
@@ -110,44 +150,7 @@
             </section>
           </div>
 
-          <div class="flex-item flex-item-1 collapsible">
-            <section>
-              <header class="append-expand">Multiplayer
-                <a class="button-expand pin-right" href="#"></a>
-              </header>
-              <summary class="collapse">
-                <p>I built the networking on top of Photon. Here are a few of the key features I added:</p>
-                <ul>
-                  <li>Room codes for easy cross platform play.</li>
-                  <li>Bot takeover any player which disconnects during a game.</li>
-                  <li>Minimal data transfer using bitpacking.</li>
-                  <li>Collision rewind using latency and tracked position for more consistent projectiles + impacts across different connections.</li>
-                  <li>Quick play - automatically find and join any active game in your region.</li>
-                </ul>
-              </summary>
-            </section>
-          </div>
-
-          <div class="flex-item flex-item-1 collapsible">
-            <section>
-              <header class="append-expand">Backend
-                <a class="button-expand pin-right" href="#"></a>
-              </header>
-              <summary class="collapse">
-                <p>The game supports cross-play and cross-progression using shared player accounts. There is also an event system which controls shop content, double xp weekends, etc. Here are some of the features I created:</p>
-                <ul>
-                  <li>Feature planning for UI/UX as well as data structure.</li>
-                  <li>Account creation forms with client-side verification for gamepad, touch screen and keyboard/mouse.</li>
-                  <li>Scoped out and briefed an event system which allowed iterative development and future extensibility.</li>
-                  <li>Built tools to manage backend and game data allowing non-technical team members to operate autonomously.</li>
-                  <li>Integrated all these features into the game.</li>
-                </ul>
-                <p>This system was built on top of Gamesparks.</p>
-              </summary>
-            </section>
-          </div>
-
-          <div class="flex-item flex-item-1 collapsible">
+          <div class="flex-item flex-item-1 collapsible" id="section-leveleditor">
             <section>
               <header class="append-expand">Level Editor
                 <a class="button-expand pin-right" href="#"></a>
@@ -167,28 +170,7 @@
             </section>
           </div>
 
-          <div class="flex-item flex-item-1 collapsible">
-            <section>
-              <header class="append-expand">UI Structure
-                <a class="button-expand pin-right" href="#"></a>
-              </header>
-              <summary class="collapse">
-                <p>I built a framework for many projects alongside Drive Buy to handle the UI. The key features are:</p>
-                <ul>
-                  <li>Simple to use API for moving between screens with multiple layers.</li>
-                  <li>Transitions could be created through a visual editor and reused throughout project.</li>
-                  <li>Leveraged Unity's Addressables package for improved loading times, reduced memory usage and smaller disk size.</li>
-                  <li>Input managed for keyboard/mouse, touch and gamepad with automatic visual updates for glyphs.</li>
-                  <li>Selected object managed between screens with history.</li>
-                  <li>Endless scrolling dynamic content with smooth performance with simple script data-source interface.</li>
-                  <li>Simple memory management and editor-friendly preload groups.</li>
-                </ul>
-                <p>I have shipped multiple products using this framework across multiple platforms including desktop, mobile and console.</p>
-              </summary>
-            </section>
-          </div>
-
-          <div class="flex-item flex-item-1 collapsible">
+          <div class="flex-item flex-item-1 collapsible" id="section-localisation">
             <section>
               <header class="append-expand">Localisation
                 <a class="button-expand pin-right" href="#"></a>
@@ -238,28 +220,27 @@
             </section>
           </div>
 
-          <div class="flex-item flex-item-1 collapsible">
+          <div class="flex-item flex-item-1 collapsible" id="section-multiplayer">
             <section>
-              <header class="append-expand">Builds
+              <header class="append-expand">Multiplayer
                 <a class="button-expand pin-right" href="#"></a>
               </header>
               <summary class="collapse">
-                <p>Since I was responsible for nearly every single build of the game and the numerous different versions of the game for different scenarios (dev, publisher builds, in-person events, store builds, etc) I had to build a system to help me manage everything.</p>
-                <p>The base building blocks of my solution were Scripting Define Symbols as they let me discretely manage features as needed. I also used different settings for libraries and assets but that was on a platform-by-platform level was only useful for more general issues (e.g. no Discord integration on Nintendo Switch).</p>
+                <p>I built the networking on top of Photon. Here are a few of the key features I added:</p>
                 <ul>
-                  <li>Created 'Build Definition' objects which contained a list of Scripting Define Symbols with a toggle and a description.</li>
-                  <li>Setup Build Definitions for each version, e.g: Steam Development, Steam Demo, Steam Beta, Steam Release, Non-Steam PC In-Person Event, etc, etc.</li>
-                  <li>In-person event builds allowed bypassing external auth and a custom LAN mode since the internet at events is often terrible.</li>
-                  <li>Integration with Itch.IO's Butler to upload new builds remotely for other team members/my other machines to use.</li>
-                  <li>Manage publisher/region specific builds.</li>
-                  <li>PC builds in about 40 seconds since majority of content in Addressables. This allowed rapid iteration and testing of builds.</li>
+                  <li>Room codes for easy cross platform play.</li>
+                  <li>Bot takeover any player which disconnects during a game.</li>
+                  <li>Minimal data transfer using bitpacking.</li>
+                  <li>Smooth player rigidbody movement using interpolation and parameters adjusted per player's latency.</li>
+                  <li>Collision rewind using latency and tracked position for more consistent projectiles + impacts across different connections.</li>
+                  <li>Quick play - automatically find and join any active game in your region.</li>
+                  <li>A blend of authoritative host and client-side triggers with host verification.</li>
                 </ul>
-                <p>All these features were made to be simple to use with everything visual in Editor windows.</p>
               </summary>
             </section>
           </div>
 
-          <div class="flex-item flex-item-1 collapsible">
+          <div class="flex-item flex-item-1 collapsible" id="section-platforms">
             <section>
               <header class="append-expand">Platforms
                 <a class="button-expand pin-right" href="#"></a>
@@ -291,13 +272,13 @@
             </section>
           </div>
 
-          <div class="flex-item flex-item-1 collapsible">
+          <div class="flex-item flex-item-1 collapsible" id="section-techartvfx">
             <section>
               <header class="append-expand">Tech Art &amp; VFX
                 <a class="button-expand pin-right" href="#"></a>
               </header>
               <summary class="collapse">
-                <p>I created the vast majority of in-game and UI effects, including meshes, textures, shaders and platform optimization.</p>
+                <p>I created the vast majority of in-game and UI effects, including meshes, textures, shaders and platform optimization. I created &amp; shipped many animations and effects either with no design or just description/static images.</p>
                 <ul>
                   <li>Vehicle shader using color masks, decals and 5 different materials &amp; clearcoat allowing rapid content creation.</li>
                   <li>Custom vehicle shader using traditional PBR textures alongside built-in clearcoat of the base shader.</li>
@@ -305,12 +286,36 @@
                   <li>Powerup effects such as electricity arcs and frozen objects.</li>
                   <li>Stylized in game messaging with localisation support.</li>
                   <li>Custom post-processing including deterministic glitch effect which affected authored area only.</li>
+                  <li>UI effects and animations such as level up &amp; item unlock.</li>
                 </ul>
                 <p>All of the above were also included in the Addressables system for minimal runtime memory usage and improved loading times.</p>
               </summary>
             </section>
           </div>
-        </section> 
+
+          <div class="flex-item flex-item-1 collapsible" id="section-uistructure">
+            <section>
+              <header class="append-expand">UI Structure
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>I built a framework for many projects alongside Drive Buy to handle the UI. The key features are:</p>
+                <ul>
+                  <li>Simple to use API for moving between screens with multiple layers.</li>
+                  <li>Transitions could be created through a visual editor and reused throughout project.</li>
+                  <li>Leveraged Unity's Addressables package for improved loading times, reduced memory usage and smaller disk size.</li>
+                  <li>Input managed for keyboard/mouse, touch and gamepad with automatic visual updates for glyphs.</li>
+                  <li>Selected object managed between screens with history.</li>
+                  <li>Endless scrolling dynamic content with smooth performance with simple script data-source interface.</li>
+                  <li>Simple memory management and editor-friendly preload groups.</li>
+                </ul>
+                <p>I have shipped multiple products using this framework across multiple platforms including desktop, mobile and console.</p>
+              </summary>
+            </section>
+          </div>
+        </section>
+
+          
     </div>
   </main>
   
