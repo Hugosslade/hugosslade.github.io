@@ -93,7 +93,7 @@ textarea {
   margin: 0 auto;
 }
 
-.wrapper.padding
+.padding
 {
   padding: 1em;
 }
@@ -348,6 +348,8 @@ nav a
 {
   color: #fff;
   text-decoration: none;
+  display: block;
+  padding: 15px 0;
 }
 
 nav a:hover
@@ -529,7 +531,45 @@ a.button:focus, .button-expand:focus
     width: 100%;
     max-width: 100%;
   }
-  /* Style adjustments for viewports that meet the condition */
+
+  a.button
+  {
+    min-height: 44px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    line-height: 1.8em;
+  }
+
+  .button-expand.pin-right
+  {
+    width: 44px;
+    height: 44px;
+    top: -4px !important;
+    line-height: 2em;
+  }
+
+  .svg-icons.links
+  {
+    height: 28px;
+  }
+
+  .svg-icons.links a
+  {
+    padding: 8px;
+    margin: -8px;
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    line-height: 0;
+  }
+
+  .svg-icons a img
+  {
+    width: 28px;
+    height: 28px;
+    display: block;
+    line-height: 0;
+  }
 }
 
 @media print,
