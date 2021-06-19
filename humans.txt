@@ -3,11 +3,15 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+	Hugo Scott-Slade -- Design + Development -- @hugosslade
 
 # THANKS
 
-    <name>
+    HTML5 Boilerplate
+    StackOverflow
+    GitHub
+    W3Schools
+    MDC Docs
 
 # TECHNOLOGY COLOPHON
 

@@ -130,7 +130,7 @@ h2
   font-size: 2em;
 }
 
-a, summary, p
+a, summary, p, #info span, section
 {
   font-family: 'Open Sans', sans-serif;
 }
@@ -332,12 +332,16 @@ a, summary, p
   color: #fff;
 }
 
+#info span
+{
+  display: block;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
 nav
 {
   background-color: hsl(234deg 27% 52%);
-/*  position: sticky;
-  top: 0;
-  z-index: 100;*/
 }
 
 nav a
