@@ -30,11 +30,13 @@ html {
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
+  color: #000;
 }
 
 ::selection {
   background: #b3d4fc;
   text-shadow: none;
+  color: #000;
 }
 
 /*
@@ -115,8 +117,7 @@ main
 
 header, h1, h2, h3, h4
 {
-  /*font-family: 'Hammersmith One', sans-serif;*/
-  font-family: 'Paytone One', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 h1
@@ -150,7 +151,7 @@ a, summary, p, #info span, section
   background-color: #fff;
   text-decoration: none;
   color: #000;
-  box-shadow: 0 20px 20px -10px rgb(0 0 0 / 10%);
+  box-shadow: 2px 2px 0 0px #222, 4px 4px 0 0px #222, 6px 6px 0 0px #222, 8px 8px 0 0 #222;
   box-sizing: content-box;
 }
 
@@ -218,7 +219,7 @@ a, summary, p, #info span, section
 
 .flex-item > section > header .pin-right
 {
-  top: 4px;
+  top: 2px;
 }
 
 .flex-item summary
@@ -326,9 +327,9 @@ a, summary, p, #info span, section
   top: 0;
 }
 
-#info, a.button, .button-expand
+#info, .button-expand
 {
-  background: hsl(234deg 27% 57%);
+  background: #222;
   color: #fff;
 }
 
@@ -358,23 +359,14 @@ nav a:hover
   text-decoration: underline;
 }
 
-a.button
-{
-  text-decoration: none;
-  border-radius: 6px;
-  padding: 8px 14px;
-  display: inline-block;
-  margin: 1em 0.5em 0 0;
-}
-
-a.button:hover, .button-expand:hover
+.button-expand:hover
 {
   /*box-shadow: #6875ef 0px 0px 0px 4px;*/
   background: hsl(234deg 27% 65%);
   text-decoration: underline;
 }
 
-a.button:focus, .button-expand:focus
+.button-expand:focus
 {
   box-shadow: hsl(234deg 27% 57%) 0px 0px 0px 6px;
   outline: none;
@@ -404,6 +396,160 @@ a.button:focus, .button-expand:focus
 {
   content: '×';
 }
+
+a.button
+{
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  margin: 1em 0.5em 0 0;
+}
+
+a.button > span
+{
+  position: relative;
+  top: 0px;
+  left: 0px;
+  border-radius: 6px;
+  padding: 8px 14px;
+  display: inline-block;
+}
+
+a.button:hover > span
+{
+  top: 1px;
+  left: 1px;
+  text-decoration: underline;
+}
+
+a.button:active > span
+{
+  top: 4px;
+  left: 4px;
+  text-decoration: underline;
+  box-shadow: none !important;
+}
+
+a.button:focus > span
+{
+  box-shadow: none !important; 
+}
+
+.project
+{
+  --background-color: #fff;
+  --shadow-color: #222;
+  --text-color: #222;
+  --button-shadow-color: #999;
+}
+
+.project.project-drivebuy
+{
+  --background-color: rgb(114 16 125);
+  --shadow-color: rgb(77 7 84);
+  --text-color: rgb(255 199 89);
+  --button-shadow-color: rgb(160 116 28);
+}
+
+/* 
+  This is a bit mad but it works & still uses proper img tags.
+  If no support, shows black - Uses CSS-Filters to match the color
+  -> calculate using this tool https://codepen.io/sosuke/pen/Pjoqqp
+*/
+.project.project-drivebuy .append-icons img
+{
+  filter: invert(100%) sepia(86%) saturate(2512%) hue-rotate(313deg) brightness(101%) contrast(101%);
+}
+
+.project.project-nestlums
+{
+  --background-color: #9e81fc;
+  --shadow-color: #523d9a;
+  --text-color: #fff6fc;
+  --button-shadow-color: #d6b3cb;
+}
+
+.project.project-nestlums .append-icons img
+{
+  filter: invert(87%) sepia(46%) saturate(190%) hue-rotate(295deg) brightness(107%) contrast(103%);
+}
+
+.project.project-seaheroquest
+{
+  --background-color: #d3d38b;
+  --shadow-color: #5fa17a;
+  --text-color: #4f5a46;
+  --button-shadow-color: #2e3924;
+}
+
+.project.project-seaheroquest .append-icons img
+{
+  filter: invert(33%) sepia(6%) saturate(1252%) hue-rotate(50deg) brightness(97%) contrast(92%);
+}
+
+.project.project-gumulon
+{
+  --background-color: #86cea4;
+  --shadow-color: #9e9e66;
+  --text-color: #14271c;
+  --button-shadow-color: #050a07;
+}
+
+.project.project-gumulon .append-icons img
+{
+  filter: invert(10%) sepia(54%) saturate(408%) hue-rotate(92deg) brightness(97%) contrast(93%);
+}
+
+.project.project-codestrike
+{
+  --background-color: #cebd9b;
+  --shadow-color: #9b8a69;
+  --text-color: #302721;
+  --button-shadow-color: #110d0b;
+}
+
+.project.project-codestrike .append-icons img
+{
+  filter: invert(9%) sepia(15%) saturate(1153%) hue-rotate(341deg) brightness(100%) contrast(84%);
+}
+
+.project.project-chippy
+{
+  --background-color: #ed5468;
+  --shadow-color: #bb394a;
+  --text-color: #f4e2bd;
+  --button-shadow-color: #c9b68f;
+}
+
+.project.project-chippy .append-icons img
+{
+  filter: invert(87%) sepia(6%) saturate(1543%) hue-rotate(341deg) brightness(109%) contrast(91%);
+}
+
+.project
+{
+  background: var(--background-color);
+  color: var(--text-color);
+  box-shadow: 2px 2px 0 0px var(--shadow-color), 4px 4px 0 0px var(--shadow-color), 6px 6px 0 0px var(--shadow-color), 8px 8px 0 0 var(--shadow-color);
+}
+
+.project a.button > span
+{
+  background-color: var(--text-color);
+  color: var(--background-color);
+  box-shadow: 2px 2px 0 0px var(--button-shadow-color), 4px 4px 0 0px var(--button-shadow-color);
+}
+
+.project a.button:hover > span
+{
+  box-shadow: 2px 2px 0 0px var(--button-shadow-color), 3px 3px 0 0px var(--button-shadow-color);
+}
+
+.project a.button:active > span
+{
+  background-color: var(--button-shadow-color);
+}
+
 
 
 /* ==========================================================================

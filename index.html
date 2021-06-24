@@ -16,20 +16,20 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <!--<link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Open+Sans&display=swap" rel="stylesheet">-->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Paytone+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Montserrat:wght@900&display=swap" rel="stylesheet preload" as="style">
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 
-  <meta name="theme-color" content="#6774ef">
+  <meta name="theme-color" content="#222">
 </head>
 
 <body>
 
   <header id="info">
-    <div class="wrapper padding"><h1 class="append-icons icons-4">
+    <div class="wrapper padding"><h1 class="append-icons icons-4 chunk1" id="chunk">
       Hugo Scott-Slade
       <span>Full stack Game Developer</span>
       <ul id="social-links" class="horiz-list svg-icons pin-right links">
@@ -46,7 +46,7 @@
       <h2>Projects</h2>
       <section id="projects" class="flex-container">
 
-        <div class="flex-item flex-item-2 project img-top">
+        <div class="flex-item flex-item-2 project project-drivebuy img-top">
           <div class="img-container" style="background-image: url('img/project-drivebuy.jpg')"></div>
           <section>
             <header class="append-icons icons-2">Drive Buy
@@ -56,12 +56,12 @@
               </ul>
             </header>
             <summary>Fast-paced multiplayer vehicle combat game with crossplay.</summary>
-            <a class="button" href="project-drivebuy.html">More Info</a>
-            <a class="button" href="https://www.drivebuygame.com" target="_blank" rel="noreferrer noopener">Visit Website &#187;</a>
+            <a class="button" href="project-drivebuy.html"><span>More Info</span></a>
+            <a class="button" href="https://www.drivebuygame.com" target="_blank" rel="noreferrer noopener"><span>Visit Website &#187;</span></a>
           </section>
         </div>
 
-        <div class="flex-item flex-item-2 project img-top">
+        <div class="flex-item flex-item-2 project img-top project-nestlums">
           <div class="img-container" style="background-image: url('img/project-nestlums.jpg')"></div>
           <section>
             <header class="append-icons icons-2">Nestlums
@@ -72,11 +72,11 @@
             </header>
             <summary>Money training for kids through games and lessons.</summary>
             <!--<a class="button" href="#">View Project</a>-->
-            <a class="button" href="https://www.nestlums.io" target="_blank" rel="noreferrer noopener">Visit Website &#187;</a>
+            <a class="button" href="https://www.nestlums.io" target="_blank" rel="noreferrer noopener"><span>Visit Website &#187;</span></a>
           </section>
         </div>
 
-        <div class="flex-item flex-item-2 project img-top">
+        <div class="flex-item flex-item-2 project img-top project-seaheroquest">
           <div class="img-container" style="background-image: url('img/project-seaheroquest.jpg')"></div>
           <section>
             <header class="append-icons icons-3">Sea Hero Quest
@@ -88,11 +88,11 @@
             </header>
             <summary>Award-winning game to help dementia research.</summary>
             <!--<a class="button" href="#">View Project</a>-->
-            <a class="button" href="http://www.seaheroquest.com/" target="_blank" rel="noreferrer noopener">Visit Website &#187;</a>
+            <a class="button" href="http://www.seaheroquest.com/" target="_blank" rel="noreferrer noopener"><span>Visit Website &#187;</span></a>
           </section>
         </div>
 
-        <div class="flex-item flex-item-2 project img-top">
+        <div class="flex-item flex-item-2 project img-top project-gumulon">
           <div class="img-container" style="background-image: url('img/project-gumulon.jpg')"></div>
           <section>
             <header class="append-icons icons-1">Gumulon
@@ -102,11 +102,11 @@
             </header>
             <summary>Stride's pioneering chew-controlled video game.</summary>
             <!--<a class="button" href="#">View Project</a>-->
-            <a class="button" href="http://wklondon.com/work/gumulon/" target="_blank" rel="noreferrer noopener">Visit Website &#187;</a>
+            <a class="button" href="http://wklondon.com/work/gumulon/" target="_blank" rel="noreferrer noopener"><span>Visit Website &#187;</span></a>
           </section>
         </div>
 
-        <div class="flex-item flex-item-2 project img-top">
+        <div class="flex-item flex-item-2 project img-top project-codestrike">
           <div class="img-container" style="background-image: url('img/project-codestrike.jpg')"></div>
           <section>
             <header class="append-icons icons-1">Code Strike
@@ -117,11 +117,11 @@
             </header>
             <summary>Bletchley Park inspired code breaking game tied to Call of Duty.</summary>
             <!--<a class="button" href="#">View Project</a>-->
-            <a class="button" href="https://saatchi.co.uk/en-gb/work/mattessons-code-strike/" target="_blank" rel="noreferrer noopener">Visit Website &#187;</a>
+            <a class="button" href="https://saatchi.co.uk/en-gb/work/mattessons-code-strike/" target="_blank" rel="noreferrer noopener"><span>Visit Website &#187;</span></a>
           </section>
         </div>
 
-        <div class="flex-item flex-item-2 project img-top">
+        <div class="flex-item flex-item-2 project img-top project-chippy">
           <div class="img-container" style="background-image: url('img/project-chippy.jpg')"></div>
           <section>
             <header class="append-icons icons-1">Chippy
@@ -131,7 +131,7 @@
             </header>
             <summary>Fish &amp; Chip shop time management game.</summary>
             <!--<a class="button" href="#">View Project</a>-->
-            <a class="button" href="https://www.chippyapp.com/" target="_blank" rel="noreferrer noopener">Visit Website &#187;</a>
+            <a class="button" href="https://www.chippyapp.com/" target="_blank" rel="noreferrer noopener"><span>Visit Website &#187;</span></a>
           </section>
         </div>
       </section> 
