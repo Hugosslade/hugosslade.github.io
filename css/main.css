@@ -435,12 +435,44 @@ a.button:focus > span
   box-shadow: none !important; 
 }
 
+/*
+  SVG coloring
+
+  This is a bit mad but it works & still uses proper img tags.
+  If no support, shows black - Uses CSS-Filters to match the color
+  -> calculate using this tool https://codepen.io/sosuke/pen/Pjoqqp
+*/
+
 .project
 {
   --background-color: #fff;
   --shadow-color: #222;
   --text-color: #222;
   --button-shadow-color: #999;
+}
+
+.project.project-racket-club {
+  --background-color: #295aa7;
+  --text-color: #ffffff;
+  --shadow-color: #191945;
+  --button-shadow-color: #191945;
+}
+
+.project.project-racket-club .append-icons img
+{
+  filter: invert(99%) sepia(40%) saturate(278%) hue-rotate(13deg) brightness(103%) contrast(98%);
+}
+
+.project.project-bait {
+  --background-color: #f46226;
+  --text-color: #fbfcee;
+  --shadow-color: #932604;
+  --button-shadow-color: #d8a45c;
+}
+
+.project.project-bait .append-icons img
+{
+  filter: invert(99%) sepia(40%) saturate(278%) hue-rotate(13deg) brightness(103%) contrast(98%);
 }
 
 .project.project-demeo {
@@ -463,11 +495,6 @@ a.button:focus > span
   --button-shadow-color: rgb(160 116 28);
 }
 
-/* 
-  This is a bit mad but it works & still uses proper img tags.
-  If no support, shows black - Uses CSS-Filters to match the color
-  -> calculate using this tool https://codepen.io/sosuke/pen/Pjoqqp
-*/
 .project.project-drivebuy .append-icons img
 {
   filter: invert(100%) sepia(86%) saturate(2512%) hue-rotate(313deg) brightness(101%) contrast(101%);
