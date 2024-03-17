@@ -443,6 +443,18 @@ a.button:focus > span
   --button-shadow-color: #999;
 }
 
+.project.project-demeo {
+  --background-color: #051d52;
+  --shadow-color: #030b26;
+  --text-color: #cfb064;
+  --button-shadow-color: #614d22;
+}
+
+.project.project-demeo .append-icons img
+{
+  filter: invert(100%) sepia(47%) saturate(2975%) hue-rotate(317deg) brightness(87%) contrast(83%);
+}
+
 .project.project-drivebuy
 {
   --background-color: rgb(114 16 125);
