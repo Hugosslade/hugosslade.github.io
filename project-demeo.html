@@ -1,0 +1,204 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hugo Scott-Slade</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Montserrat:wght@900&display=swap" rel="stylesheet preload" as="style">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#6774ef">
+</head>
+
+<body>
+
+  <header id="info">
+    <div class="wrapper padding"><h1 class="append-icons icons-4">
+      Hugo Scott-Slade
+      <span>Full Stack & Game Developer</span>
+      <ul id="social-links" class="horiz-list svg-icons pin-right links">
+        <li><a href="https://twitter.com/hugosslade" target="_blank" rel="noreferrer noopener"><img src="img/twitter.svg" alt="Twitter"/></a></li>
+        <li><a href="https://github.com/hugosslade"  target="_blank" rel="noreferrer noopener"><img src="img/github.svg" alt="Github"/></a></li>
+        <li><a href="https://www.linkedin.com/in/hugo-scott-slade-7b9287125/" target="_blank" rel="noreferrer noopener"><img src="img/linkedin.svg" alt="LinkedIn"/></a></li>
+        <li><a href="mailto:hugosslade@gmail.com" target="_blank" rel="noreferrer noopener"><img src="img/email.svg" alt="Email"/></a></li>
+      </ul>
+    </h1>
+    </div>
+  </header>
+  <nav>
+    <div class="wrapper padding">
+      <a href="index.html">&laquo; Back to Projects</a>
+    </div>
+  </nav>
+  <main>
+    <div class="wrapper padding">
+      <!--<h2>Projects</h2>-->
+        <section id="projects" class="flex-container">
+          <div class="flex-item flex-item-1 project img-top">
+            <div class="img-container" style="background-image: url('img/project-demeo.jpg')"></div>
+            <section>
+              <header class="append-icons icons-2">Demeo
+                <ul class="horiz-list pin-right svg-icons svg-icons-24">
+                  <li><img src="img/vr.svg" alt="VR" title="VR"/></li>
+                  <li><img src="img/steam.svg" alt="Steam" title="Steam"/></li>
+                  <li><img src="img/apple.svg" alt="iOS" title="iOS"/></li>
+                  <li><img src="img/playstation.svg" alt="Playstation" title="Playstation"/></li> 
+                </ul>
+              </header>
+              <summary>
+                <p>Demeo is a cross-platform cooperative adventure for up to four players that recreates all of the magic and camaraderie of gathering around a tabletop with friends to do battle against the forces of evil.</p>
+                <p>Requiring strategy, cunning and teamwork, Demeo is a journey through a fantasy world that only the bravest band of heroes can survive. Adventurers, it’s time to unite!</p>
+                <p>I was on the team responsible for the social space for this game and additionally collaborated on memory optimization. I was the lead developer for certain features as well as helping on general issues.</p>
+                <p>A key focus of this project was creating a solid core with reusable features for future social lobbies. This was one of the reasons I was hired and brought onto this team. I worked with the team to make this vision a reality.</p>
+                <p>I have organized the work I did into different sections highlighting some of the key points for each. For a fuller picture of my role &amp; responsibilities please get in touch using the links at the top of the page.</p>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible expanded" id="section-arcade-machine">
+            <section>
+              <header class="append-expand">Arcade Machine
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>We had a playable arcade machine which ran custom games (made in PICO-8).</p>
+                <p>I reworked this machine to meet performance requirements and change it's networking approach. The previous approach required a game to be fully deterministic and when joining a room it would have to simulate every frame of the game to 'catch-up' which often caused 20+ seconds of loading. It also had a constant performance cost even when not interacting with the game to keep it in sync. The new approach synced only the information to sync the visuals + audio rather than recreating the whole game, and it only ran when needed.</p>
+                <ul>
+                  <li>New networking solution to sync entire game in ~10-150 bytes</li>
+                  <li>No loading time cost.</li>
+                  <li>Performance cost was reduced to 15% of previous implementation.</li>
+                  <li>Performance cost only paid while viewing the game rather than constantly.</li>
+                  <li>Reduced fidelity version while in distance to also save performance.</li>
+                  <li>Developed entirely as a project independent package for reuse in future social spaces.</li>
+                  <li>Added new content and fixed bugs in custom game 'Hauntlet'.</li>
+                </ul>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible expanded" id="section-custom-ik">
+            <section>
+              <header class="append-expand">Custom IK
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>The game used FinalIK to simulate our torso position but for our 12 players this cost 2ms every frame on Quest 1. I wrote a custom IK solver which focussed just on our requirements and performance budgets.</p>
+                <ul>
+                  <li>Performance improved 10x on worst-performing target device.</li>
+                  <li>Solved issues with skeleton in unrealistic positions during fast movement.</li>
+                </ul>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible expanded" id="section-optimization">
+            <section>
+              <header class="append-expand">Optimization
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>A lot of work was needed to meet our requirement of 12 players on a Quest 1. This covered CPU, GPU, Memory and Networking. As we were a separate team from the main game we diligently managed our memory usage so we had no impact on the game. </p>
+                <ul>
+                  <li>I identified memory issues with the main game which were causing crashes on Quest 1. I worked closely with the game team to reduce their memory usage and ensure my team could work without external issues.</li>
+                  <li>Optimized many visual elements to reduce memory usage, draw calls and shader cost without impacting visuals.</li>
+                  <li>Created custom VFX to replace costly VFX.</li>
+                  <li>Custom performance widget in Editor and on device for tracking performance across CPU, Memory and Networking.</li>
+                  <li>Rewrote networked physics syncing to save bandwidth.</li>
+                  <li>UI optimization for both performance and memory usage.</li>
+                </ul>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible expanded expanded" id="section-packages">
+            <section>
+              <header class="append-expand">Packages
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>I was primarily brought into the team for my expertise with packages and modular code. The team had worked on a social space previously but it was highly coupled to the previous game. There was a need to create something more modular and reusable to allow integration with future games.</p>
+                <p>The new social space was underway when I joined the team but we worked on a few areas:</p>
+                <ul>
+                  <li>Core features of a social space moved into a package.</li>
+                  <li>New features were created as packages by default.</li>
+                  <li>Iteratively refined each package and created a common interface for extensibility & reusability.</li>
+                  <li>Packages I created were adopted on a company-wide level.</li>
+                  <li>I contributed to several existing company projects to add new features and fix bugs.</li>
+                  <li>The team was able to now maintain multiple live games at once. Bugs and fixes from one game were able to be shared.</li>
+                </ul>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible expanded" id="section-painting-room">
+            <section>
+              <header class="append-expand">Painting Room
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>We added a feature for painting models from the game in realtime with other players.</p>
+                <p>I worked solo on the prototype then worked with the team to integrate into production.</p>
+                <ul>
+                  <li>Multiple different brushes and tools. Each with haptics, brush direction & pressure sensitivity.</li>
+                  <li>Painting worked in realtime so you could see what all players were painting as it happened.</li>
+                  <li>Worked entirely on CPU as no GPU budget available. </li>
+                  <li>Various networking methods used to sync data in the smallest size possible and keep within bandwidth budget.</li>
+                  <li>Developed entirely as a project independent package for reuse in future social spaces.</li>
+                  <li>Work was exstensively documented. I ran a workshop with the team to onboard them to the feature and how it worked.</li>
+                </ul>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible expanded" id="section-tools">
+            <section>
+              <header class="append-expand">Tools
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>I wrote several tools for the Unity editor to improve the teams workflow and give us more time to focus on our tasks.</p>
+                <ul>
+                  <li>Manage multiple Unity editors to get into custom multiplayer games</li>
+                  <li>Customise rendering behaviours per platform</li>
+                  <li>New and expanded debug tools within game</li>
+                </ul>
+              </summary>
+            </section>
+          </div>
+
+        </section>
+    </div>
+  </main>
+  
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E8YXGT0ER4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-E8YXGT0ER4');
+  </script>
+</body>
+
+</html>

@@ -1,5 +1,7 @@
 window.onload = function()
 {
+	const expandedClass = 'expanded';
+
 	var expandButtons = document.getElementsByClassName('button-expand');
 
 	for (var i = 0; i < expandButtons.length; i++)
@@ -11,7 +13,7 @@ window.onload = function()
 		// if it matches, open the section by default
 		if(window.location.hash && window.location.hash.substring(1) === container.id)
 		{
-			ExpandOrCloseContainer(container);
+			SetContainerOpen(container, true);
 			container.scrollIntoView(true);
 		}
 
@@ -27,22 +29,23 @@ window.onload = function()
 	function OnExpandButtonClick(e)
 	{
 		var container = this.closest(".collapsible");
-
-		ExpandOrCloseContainer(container);
-			
+		ToggleContainerOpen(container);
 		e.preventDefault();
 		return false;
 	}
 
-	function ExpandOrCloseContainer(container)
+	function ToggleContainerOpen(container)
 	{
-		if (container.classList.contains('expanded'))
-		{
-			container.classList.remove('expanded');
+		SetContainerOpen(container, !container.classList.contains(expandedClass));
+	}
+
+	function SetContainerOpen(container, isOpen)
+	{
+		if(isOpen && !container.classList.contains(expandedClass)) {
+			container.classList.add(expandedClass);
 		}
-		else
-		{
-			container.classList.add('expanded');
+		else if(!isOpen && container.classList.contains(expandedClass)) {
+			container.classList.remove(expandedClass);
 		}
 	}
 };
