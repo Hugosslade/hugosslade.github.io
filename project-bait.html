@@ -1,0 +1,219 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hugo Scott-Slade</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Montserrat:wght@900&display=swap" rel="stylesheet preload" as="style">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#6774ef">
+</head>
+
+<body>
+
+  <header id="info">
+    <div class="wrapper padding"><h1 class="append-icons icons-4">
+      Hugo Scott-Slade
+      <span>Full Stack & Game Developer</span>
+      <ul id="social-links" class="horiz-list svg-icons pin-right links">
+        <li><a href="https://twitter.com/hugosslade" target="_blank" rel="noreferrer noopener"><img src="img/twitter.svg" alt="Twitter"/></a></li>
+        <li><a href="https://github.com/hugosslade"  target="_blank" rel="noreferrer noopener"><img src="img/github.svg" alt="Github"/></a></li>
+        <li><a href="https://www.linkedin.com/in/hugo-scott-slade-7b9287125/" target="_blank" rel="noreferrer noopener"><img src="img/linkedin.svg" alt="LinkedIn"/></a></li>
+        <li><a href="mailto:hugosslade@gmail.com" target="_blank" rel="noreferrer noopener"><img src="img/email.svg" alt="Email"/></a></li>
+      </ul>
+    </h1>
+    </div>
+  </header>
+  <nav>
+    <div class="wrapper padding">
+      <a href="index.html">&laquo; Back to Projects</a>
+    </div>
+  </nav>
+  <main>
+    <div class="wrapper padding">
+      <!--<h2>Projects</h2>-->
+        <section id="projects" class="flex-container">
+          <div class="flex-item flex-item-1 project img-top">
+            <div class="img-container" style="background-image: url('img/project-bait.jpg')"></div>
+            <section>
+              <header class="append-icons icons-2">Bait
+                <ul class="horiz-list pin-right svg-icons svg-icons-24">
+                  <li><img src="img/vr.svg" alt="VR" title="VR"/></li>
+                </ul>
+              </header>
+              <summary>
+                <p>Demeo is a cross-platform cooperative adventure for up to four players that recreates all of the magic and camaraderie of gathering around a tabletop with friends to do battle against the forces of evil.</p>
+                <p>Requiring strategy, cunning and teamwork, Demeo is a journey through a fantasy world that only the bravest band of heroes can survive. Adventurers, it’s time to unite!</p>
+                <p>I was on the team responsible for the social space for this game and additionally collaborated on memory optimization. I was the lead developer for certain features as well as helping on general issues.</p>
+                <p>A key focus of this project was creating a solid core with reusable features for future social lobbies. This was one of the reasons I was hired and brought onto this team. I worked with the team to make this vision a reality.</p>
+                <p>I have organized the work I did into different sections highlighting some of the key points for each. For a fuller picture of my role &amp; responsibilities please get in touch using the links at the top of the page.</p>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible expanded" id="section-arcade-machine">
+            <section>
+              <header class="append-expand">Arcade Machine
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>We wanted a new Arcade machine game similar to Demeo. This was built using my C# version of PICO-8. It was designed this way to enable our game designer to create the games as they were familiar with PICO-8. </p>
+                <ul>
+                  <li>Created entire game from scratch to shipped product in 2 days to meet last minute deadline change.</li>
+                  <li>Implemented following game design document.</li>
+                  <li>Wrote all code, prepared game assets.</li>
+                  <li>Singleplayer game but visible in realtime to every one in multiplayer. </li>
+                  <li>Built entirely as a package agnostic of input, ready to be re-used in other lobbies.</li>
+                </ul>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible expanded" id="section-treasure-hunt">
+            <section>
+              <header class="append-expand">Treasure Hunt
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <p>A multiplayer minigame where groups of players look for treasure on a deserted island.</p>
+- Wrote the core networking logic for this gamemode which supported 4 players and hot joining.
+- Added client-side effects to mask any latency so players always had a responsive connection.
+- I added Shovel + Crowbar tools, requiring our core 'grabbable' system to be updated to support 2 handed grabbing
+- Balance between freedom of control, responsiveness and simplicity.
+- Tool work was done in iterations with regular play tests and feedback.
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible expanded" id="section-racing-boats">
+            <section>
+              <header class="append-expand">Racing Boats
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <ul>
+                  <li>Wrote the input and physics handling. </li>
+                  <li>Focussed on being fun and easy to control.</li>
+                  <li>Custom networking with client-authoritative over own boat.</li>
+                  <li>Custom collision between boats since rigidbodies didn't work satisfyingly with mixed authority networking.</li>
+                  <li>Created course for multiple game modes.</li>
+                  <li>Prepared initial VFX with extensible integration.</li>
+                </ul>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible expanded expanded" id="section-solitaire">
+            <section>
+              <header class="append-expand">Solitaire
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <ul>
+                  <li>Ported old game to new code base - rewrote and replaced old systems.</li>
+                  <li>Designed and scripted new animations.</li>
+                  <li>Integrated into multiplayer scene and new integration.</li>
+                  <li>Created new mesh + shader to render entire deck in 1 draw call with instancing.</li>
+                </ul>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible expanded" id="section-ui">
+            <section>
+              <header class="append-expand">UI
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <ul>
+                  <li>Created UI optimization guide for team, later shared internally at Unity itself.</li>
+                  <li>Worked closely with UI team to develop new no-code system for animating UI + 3D elements. This system is now used company-wide across many teams.</li>
+                  <li>Developed runtime workaround for Unity UI hierarchy / draw call structure so artists can keep their workflow without performance penalty.</li>
+                  <li>Setup standard for design implementation for UI in VR. This enabled artists to work with a familiar and consistent workflow across the project. For code this enabled simple reuse of UI elements with less bugs.</li>
+                  <li>Built extensible, reusable systems based on UX design. It was designed to create a consistent UX and codebase across multiple projects.</li>
+                </ul>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible expanded" id="section-localization">
+            <section>
+              <header class="append-expand">Localization
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <ul>
+                  <li>Lead localization implementation.</li>
+                  <li>Expanded feature set of in-house solution to support full range of UI design.</li>
+                  <li>Ensured rich UI design was maintained across all languages, fonts and layouts. Created tools & documentation for other team members to ensure this was maintained.</li>
+                </ul>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible expanded" id="section-networked-npc">
+            <section>
+              <header class="append-expand">Networked NPC
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <ul>
+                  <li>Setup NPC with deterministic animations across multiple clients.</li>
+                  <li>Flexible configuration driven by events inside Animator State Machine.</li>
+                  <li>Players could override networked state locally seamlessly blending between the authoritative state and local.</li>
+                </ul>
+              </summary>
+            </section>
+          </div>
+
+          <div class="flex-item flex-item-1 collapsible expanded" id="section-performance">
+            <section>
+              <header class="append-expand">Performance
+                <a class="button-expand pin-right" href="#"></a>
+              </header>
+              <summary class="collapse">
+                <ul>
+                  <li>Created flexible LOD system which worked across all platforms identically. </li>
+                  <li>LOD system also enabled control of non-renderers allowing logic to be affected - saving CPU and bandwidth.</li>
+                </ul>
+              </summary>
+            </section>
+          </div>
+
+        </section>
+    </div>
+  </main>
+  
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E8YXGT0ER4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-E8YXGT0ER4');
+  </script>
+</body>
+
+</html>
