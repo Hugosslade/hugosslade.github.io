@@ -451,6 +451,19 @@ a.button:focus > span
   --button-shadow-color: #999;
 }
 
+.project.project-gears-and-goo {
+  --background-color: #6b0265;
+  --text-color: #feffff;
+  --shadow-color: #290027;
+  --button-shadow-color: #290027;
+}
+
+.project.project.project-gears-and-goo .append-icons img
+{
+ /* filter: invert(15%) sepia(80%) saturate(2631%) hue-rotate(286deg) brightness(79%) contrast(117%); */
+  filter: invert(99%) sepia(40%) saturate(278%) hue-rotate(13deg) brightness(103%) contrast(98%);
+}
+
 .project.project-racket-club {
   --background-color: #295aa7;
   --text-color: #ffffff;
@@ -587,6 +600,10 @@ a.button:focus > span
 .project a.button:active > span
 {
   background-color: var(--button-shadow-color);
+}
+
+.svg-icons .vr {
+  margin-top: 2px;
 }
 
 
